@@ -1,24 +1,24 @@
 def calc1(time, distance):
-    #minutes = int(time / 100)
-    #seconds = time - (minutes * 100)
-    #print(f'Time is {minutes}:{seconds}')
-    minutes = 1
-    seconds = 1
+
+    global minutes
+    global seconds
+    
     if(time  >= 100):
         minutes = int(time / 100)
         seconds = time - 100*minutes
     else:
-        print('add feature later')
-
-    td = time/distance
+        print('add bug checking later')
+  
   
     paceMinutes = int((time / distance) / 100)
-    paceSeconds = (((minutes / distance) - paceMinutes) * (paceMinutes * 60) + seconds) / distance
+    paceSeconds = (((minutes % distance) * 60) + seconds) / distance
+
     print("\n")
     print('--------------------------------------------')
-    print(f'{paceMinutes}:{paceSeconds:.6} pace for {distance} miles')
+    print(f'{paceMinutes}:{paceSeconds:.5} pace for {distance} miles')
     print('--------------------------------------------')
     print("\n")
+    
 
 #Enter Time and Distance below
-calc1(2625, 5)
+calc1(2625, 5.4)
