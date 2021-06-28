@@ -20,7 +20,5 @@ def calc1(time, distance):
     print('--------------------------------------------')
     print("\n")
 
-
-
-
+#Enter Time and Distance below
 calc1(2625, 5)
