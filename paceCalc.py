@@ -1,4 +1,12 @@
 def calc1(time, distance):
+    if distance == 'marathon':
+        distance = 26.2188
+    elif(distance == 'half-marathon'):
+        distance = 13.1094
+    elif(distance == '10k'):
+        distance = 6.21371
+    elif(distance == '5k'):
+        distance = 3.10686
 
     global minutes
     global seconds
@@ -21,4 +29,4 @@ def calc1(time, distance):
     
 
 #Enter Time and Distance below
-calc1(2625, 5.4)
+calc1(1500, '5k')
